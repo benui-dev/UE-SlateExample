@@ -10,15 +10,15 @@ class SExampleAttributeWidget : public SCompoundWidget
 public:
 	SLATE_BEGIN_ARGS(SExampleAttributeWidget)
 		{}
-		SLATE_ATTRIBUTE(FColor, ColorSlateAttribute)
-		SLATE_ATTRIBUTE(FColor, ColorRegularAttribute)
+		SLATE_ATTRIBUTE(FSlateColor, ColorSlateAttribute)
+		SLATE_ATTRIBUTE(FSlateColor, ColorRegularAttribute)
 	SLATE_END_ARGS()
 	
 	SExampleAttributeWidget();
 	void Construct(const FArguments& InArgs);
 protected:
-	TSlateAttribute<FColor> ColorSlateAttribute;
-	TAttribute<FColor> ColorRegularAttribute;
+	TSlateAttribute<FSlateColor> ColorSlateAttribute;
+	TAttribute<FSlateColor> ColorRegularAttribute;
 
 	TSharedPtr<SImage> RegularAttributeImage;
 	TSharedPtr<SImage> SlateAttributeImage;
