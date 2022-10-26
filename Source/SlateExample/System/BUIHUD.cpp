@@ -1,5 +1,5 @@
 ﻿#include "BUIHUD.h"
-#include "SExampleWidget.h"
+#include "SlateExample/Slate/Example/SExampleWidget.h"
 #include "Widgets/SViewport.h"
 
 ABUIHUD::ABUIHUD(const FObjectInitializer& ObjectInitializer)
@@ -12,7 +12,7 @@ void ABUIHUD::BeginPlay()
 	Super::BeginPlay();
 
 	MyWidget = SNew(SExampleWidget)
-		.LabelText(NSLOCTEXT("Example","OhNo","OhNo"));
+		.LabelText(NSLOCTEXT("Example","OhNo","Hello world"));
 
 	UGameViewportClient* ViewportClient = GetWorld()->GetGameViewport();
 	ViewportClient->AddViewportWidgetContent(MyWidget.ToSharedRef());

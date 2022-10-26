@@ -7,12 +7,17 @@ class SExampleWidget : public SCompoundWidget
 {
 public:
 	SLATE_BEGIN_ARGS(SExampleWidget)
-		// : _Text(FText::GetEmpty()) // optional
 		{} //
 		SLATE_ARGUMENT(FText, LabelText)
 	SLATE_END_ARGS()
 
 	void Construct(const FArguments& InArgs);
+
+	void SetText(FText NewText);
 protected:
-	FText LabelText;
+	FText Text;
+	
+	FSlateFontInfo Font;
+
+	TSharedPtr<STextBlock> TextBlock;
 };
