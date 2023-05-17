@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
-#include "Widgets/SLeafWidget.h"
+#include "Widgets/SCompoundWidget.h"
 
 class SExampleListWidget : public SCompoundWidget
 {
